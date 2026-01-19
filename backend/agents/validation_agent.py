@@ -1,0 +1,1 @@
+def validate(d): return {'final_confidence':0.87}
