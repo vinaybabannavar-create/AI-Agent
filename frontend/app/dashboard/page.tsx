@@ -336,8 +336,8 @@ export default function Dashboard() {
 
       <style jsx>{`
         .dash-container {
-          padding: 2rem 2rem 4rem;
-          max-width: 1400px;
+          padding: 1rem 2rem 4rem;
+          max-width: 1600px;
           margin: 0 auto;
         }
 
@@ -351,14 +351,17 @@ export default function Dashboard() {
         .stat-card {
           display: flex;
           align-items: center;
-          gap: 1rem;
-          padding: 1.5rem;
-          border-radius: 16px;
-          transition: transform 0.3s ease, border-color 0.3s ease;
+          gap: 1.25rem;
+          padding: 1.75rem;
+          border-radius: 20px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          background: rgba(255, 255, 255, 0.02);
         }
         .stat-card:hover {
-          transform: translateY(-3px);
+          transform: translateY(-5px);
+          background: rgba(255, 255, 255, 0.04);
           border-color: var(--accent-primary);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
         .stat-icon { font-size: 2rem; }
         .stat-value {

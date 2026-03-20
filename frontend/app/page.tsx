@@ -41,20 +41,24 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 90vh;
+          min-height: 95vh;
           padding: 2rem;
           text-align: center;
+          background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
         }
         .hero-title {
-          font-size: 4rem;
-          margin-bottom: 1.5rem;
-          line-height: 1.1;
+          font-size: 5rem;
+          margin-bottom: 2rem;
+          line-height: 1;
+          font-weight: 800;
+          letter-spacing: -0.04em;
         }
         .hero-subtitle {
-          font-size: 1.25rem;
+          font-size: 1.4rem;
           color: var(--text-secondary);
-          max-width: 600px;
-          margin: 0 auto 2.5rem;
+          max-width: 700px;
+          margin: 0 auto 3.5rem;
+          line-height: 1.6;
         }
         .cta-wrapper {
           display: flex;

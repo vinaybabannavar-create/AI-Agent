@@ -95,8 +95,9 @@ export default function Signup() {
         }
         .auth-card {
           width: 100%;
-          max-width: 440px;
+          max-width: 480px;
           text-align: center;
+          border-radius: 32px;
         }
         .auth-title {
           font-size: 2rem;

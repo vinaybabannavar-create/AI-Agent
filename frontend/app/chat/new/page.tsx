@@ -209,11 +209,11 @@ export default function NewAgentPage() {
 
       <style jsx>{`
         .builder-container {
-          padding: 2rem 2rem 4rem;
-          max-width: 1100px;
+          padding: 1rem 2rem 4rem;
+          max-width: 1400px;
           margin: 0 auto;
         }
-        .builder-card { padding: 2.5rem; }
+        .builder-card { padding: 3rem; border-radius: 32px; }
         .back-link {
           display: block;
           text-align: left;
@@ -228,10 +228,12 @@ export default function NewAgentPage() {
         /* Workspace */
         .workspace {
           display: grid;
-          grid-template-columns: 1fr 1.1fr;
-          gap: 1.5rem;
-          padding: 1.5rem;
-          border-radius: 20px;
+          grid-template-columns: 1fr 1.2fr;
+          gap: 2rem;
+          padding: 2rem;
+          border-radius: 24px;
+          background: rgba(255, 255, 255, 0.01);
+          border: 1px solid rgba(255, 255, 255, 0.03);
         }
         .input-group { margin-bottom: 1.25rem; text-align: left; }
         .input-group label {
@@ -403,13 +405,19 @@ export default function NewAgentPage() {
         /* Success */
         .success-panel {
           text-align: center;
-          padding: 3rem;
-          border-radius: 20px;
-          border: 1px solid rgba(74, 222, 128, 0.3);
+          padding: 5rem 2rem;
+          border-radius: 32px;
+          border: 1px solid rgba(74, 222, 128, 0.2);
+          background: radial-gradient(circle at 50% 0%, rgba(74, 222, 128, 0.1) 0%, transparent 70%);
+          animation: success-glow 2s infinite alternate;
         }
-        .success-icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
-        .success-panel h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .success-panel p { color: var(--text-secondary); margin-bottom: 2rem; }
+        @keyframes success-glow {
+          from { box-shadow: 0 0 20px rgba(74, 222, 128, 0.1); }
+          to { box-shadow: 0 0 40px rgba(74, 222, 128, 0.2); }
+        }
+        .success-icon { font-size: 5rem; display: block; margin-bottom: 2rem; filter: drop-shadow(0 0 20px #4ade80); }
+        .success-panel h3 { font-size: 2.2rem; margin-bottom: 1rem; font-weight: 800; }
+        .success-panel p { color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; }
         .success-actions {
           display: flex;
           gap: 1rem;
