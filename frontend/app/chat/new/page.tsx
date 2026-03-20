@@ -217,12 +217,19 @@ export default function NewAgentPage() {
         .back-link {
           display: block;
           text-align: left;
-          color: var(--text-secondary);
+          color: var(--accent-secondary);
           text-decoration: none;
-          margin-bottom: 1.5rem;
-          font-size: 0.9rem;
+          margin-bottom: 2rem;
+          font-size: 0.95rem;
+          font-weight: 500;
+          opacity: 0.8;
+          transition: opacity 0.2s;
         }
-        .builder-title { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .back-link:hover { opacity: 1; }
+        .builder-title { font-size: 2.8rem; margin-bottom: 0.5rem; white-space: nowrap; }
+        @media (max-width: 480px) {
+          .builder-title { font-size: 2.2rem; }
+        }
         .builder-subtitle { color: var(--text-secondary); margin-bottom: 2.5rem; }
 
         /* Workspace */
