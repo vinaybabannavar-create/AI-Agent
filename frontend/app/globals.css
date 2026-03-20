@@ -50,13 +50,13 @@ h4 {
     height: 100%;
     z-index: -1;
     background:
-        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.25) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 70%),
-        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.3) 0%, transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(168, 85, 247, 0.3) 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 75%),
+        radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 45%),
         var(--bg-dark);
-    filter: blur(60px);
-    animation: meshMove 30s ease-in-out infinite alternate;
+    filter: blur(40px);
+    animation: meshMove 25s ease-in-out infinite alternate;
 }
 
 .bg-mesh::after {
@@ -94,10 +94,12 @@ h4 {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .glass-card {
-        padding: 1.5rem;
-        border-radius: 24px;
+        padding: 1.25rem;
+        border-radius: 0; /* Bleed to edges on mobile */
+        border-left: none;
+        border-right: none;
     }
 }
 

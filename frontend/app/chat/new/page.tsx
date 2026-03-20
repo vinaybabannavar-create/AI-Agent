@@ -210,10 +210,14 @@ export default function NewAgentPage() {
       <style jsx>{`
         .builder-container {
           padding: 1rem 2rem 4rem;
-          max-width: 1400px;
-          margin: 0 auto;
+          max-width: 100%;
+          margin: 0;
         }
         .builder-card { padding: 3rem; border-radius: 32px; }
+        @media (max-width: 768px) {
+          .builder-card { padding: 1.5rem; border-radius: 0; border-left: none; border-right: none; }
+          .builder-container { padding: 0.5rem 0 3rem; }
+        }
         .back-link {
           display: block;
           text-align: left;
@@ -241,6 +245,10 @@ export default function NewAgentPage() {
           border-radius: 24px;
           background: rgba(255, 255, 255, 0.01);
           border: 1px solid rgba(255, 255, 255, 0.03);
+          width: 100%;
+        }
+        @media (max-width: 768px) {
+          .workspace { padding: 1.25rem; border-radius: 0; border-left: none; border-right: none; }
         }
         .input-group { margin-bottom: 1.25rem; text-align: left; }
         .input-group label {

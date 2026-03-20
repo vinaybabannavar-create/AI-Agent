@@ -47,18 +47,19 @@ export default function Home() {
           background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
         }
         .hero-title {
-          font-size: 5rem;
+          font-size: 6rem;
           margin-bottom: 2rem;
-          line-height: 1;
+          line-height: 0.9;
           font-weight: 800;
-          letter-spacing: -0.04em;
+          letter-spacing: -0.05em;
         }
         .hero-subtitle {
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           color: var(--text-secondary);
-          max-width: 700px;
-          margin: 0 auto 3.5rem;
-          line-height: 1.6;
+          max-width: 800px;
+          margin: 0 auto 4rem;
+          line-height: 1.5;
+          opacity: 0.9;
         }
         .cta-wrapper {
           display: flex;
@@ -73,11 +74,12 @@ export default function Home() {
           align-items: center;
         }
         @media (max-width: 768px) {
-          .hero-container { padding: 1.5rem; min-height: 80vh; }
-          .hero-title { font-size: 2.2rem; margin-bottom: 1rem; }
-          .hero-subtitle { font-size: 1.1rem; margin-bottom: 2rem; }
-          .cta-group, .cta-wrapper { flex-direction: column; width: 100%; gap: 1rem; }
-          .btn-premium, .btn-secondary { width: 100%; }
+          .hero-container { padding: 1.5rem 0; min-height: 90vh; }
+          .hero-title { font-size: 3rem; margin-bottom: 1.5rem; }
+          .hero-subtitle { font-size: 1.25rem; margin-bottom: 2.5rem; padding: 0 1.5rem; }
+          .cta-group, .cta-wrapper { flex-direction: column; width: 100%; gap: 1.25rem; padding: 0 1.5rem; }
+          .btn-premium, .btn-secondary { width: 100%; height: 60px; font-size: 1.1rem; }
+          .three-d-card { border-radius: 0; border-left: none; border-right: none; padding: 4rem 1.5rem; }
         }
       `}</style>
     </main>

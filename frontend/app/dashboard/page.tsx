@@ -336,9 +336,9 @@ export default function Dashboard() {
 
       <style jsx>{`
         .dash-container {
-          padding: 1rem 2rem 4rem;
-          max-width: 1600px;
-          margin: 0 auto;
+          padding: 1.5rem 2rem 4rem;
+          max-width: 100%;
+          margin: 0;
         }
 
         /* Stats Bar */
@@ -346,7 +346,7 @@ export default function Dashboard() {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 1.5rem;
-          margin-bottom: 2rem;
+          margin-bottom: 2.5rem;
         }
         .stat-card {
           display: flex;
@@ -743,16 +743,21 @@ export default function Dashboard() {
           .dash-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
-          .dash-container { padding: 1rem 1rem 3rem; }
-          .stats-bar { grid-template-columns: 1fr; }
-          .templates-grid { grid-template-columns: 1fr; }
+          .dash-container { padding: 1rem 0 3rem; } /* No side padding for mobile */
+          .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0 1rem; }
+          .stat-card:last-child { grid-column: span 2; }
+          .templates-grid { grid-template-columns: 1fr; padding: 0 1rem; }
           .agent-card-actions-premium { flex-wrap: wrap; }
           .p-action-btn { flex: 1 1 140px; }
           .h-divider { display: none; }
+          .dash-grid { gap: 1rem; }
+          .section-header { padding: 0 1rem; }
+          .agent-cards { gap: 0.5rem; }
+          .agent-card { border-radius: 0; border-left: none; border-right: none; }
         }
         @media (max-width: 480px) {
-          .agent-metrics { grid-template-columns: 1fr; }
-          .p-action-btn { width: 100%; }
+          .agent-metrics { grid-template-columns: repeat(3, 1fr); }
+          .p-action-btn { width: 100%; flex: 1 1 100%; }
         }
       `}</style>
     </div>
