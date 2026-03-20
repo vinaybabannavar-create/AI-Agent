@@ -12,13 +12,7 @@ app = FastAPI(title="AI Agents Builder System")
 
 # Get frontend URL from environment variable
 frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
-allowed_origins = [
-    frontend_url,
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:5173", # Vite default
-    "http://127.0.0.1:5173",
-]
+allowed_origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
