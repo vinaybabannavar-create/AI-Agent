@@ -69,8 +69,11 @@ export default function Home() {
           align-items: center;
         }
         @media (max-width: 768px) {
-          .hero-title { font-size: 2.5rem; }
-          .cta-group { flex-direction: column; }
+          .hero-container { padding: 1.5rem; min-height: 80vh; }
+          .hero-title { font-size: 2.2rem; margin-bottom: 1rem; }
+          .hero-subtitle { font-size: 1.1rem; margin-bottom: 2rem; }
+          .cta-group, .cta-wrapper { flex-direction: column; width: 100%; gap: 1rem; }
+          .btn-premium, .btn-secondary { width: 100%; }
         }
       `}</style>
     </main>

@@ -740,8 +740,16 @@ export default function Dashboard() {
           .dash-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
+          .dash-container { padding: 1rem 1rem 3rem; }
           .stats-bar { grid-template-columns: 1fr; }
-          .quick-actions { grid-template-columns: 1fr; }
+          .templates-grid { grid-template-columns: 1fr; }
+          .agent-card-actions-premium { flex-wrap: wrap; }
+          .p-action-btn { flex: 1 1 140px; }
+          .h-divider { display: none; }
+        }
+        @media (max-width: 480px) {
+          .agent-metrics { grid-template-columns: 1fr; }
+          .p-action-btn { width: 100%; }
         }
       `}</style>
     </div>

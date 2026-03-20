@@ -89,6 +89,10 @@ export default function Signup() {
           min-height: calc(100vh - 70px);
           padding: 2rem;
         }
+        @media (max-width: 480px) {
+          .auth-container { padding: 1rem; }
+          .auth-title { font-size: 1.5rem; }
+        }
         .auth-card {
           width: 100%;
           max-width: 440px;
