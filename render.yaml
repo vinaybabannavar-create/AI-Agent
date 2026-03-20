@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ai-agent-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: FRONTEND_URL
+        sync: false

@@ -1,0 +1,1 @@
+def fuse(v,t): return {'confidence':0.88}
